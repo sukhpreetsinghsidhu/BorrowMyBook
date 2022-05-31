@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrow My Book"
+            android:textStyle="bold"
+            android:textColor="@color/metal"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@color/yellow" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ibook"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/borrowCard"
+                android:minWidth="320dp"
+                android:minHeight="100dp"
+                app:cardCornerRadius="30dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/yellow"
+                android:layout_marginTop="30dp"
+                android:elevation="20dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Borrow"
+                    android:textSize="50dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnCard"
+                android:minWidth="320dp"
+                android:minHeight="100dp"
+                app:cardCornerRadius="30dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="30dp"
+                android:elevation="20dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Return"
+                    android:textSize="50dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trackerCard"
+                android:minWidth="320dp"
+                android:minHeight="100dp"
+                app:cardCornerRadius="30dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/yellow"
+                android:layout_marginTop="30dp"
+                android:elevation="20dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Track"
+                    android:textSize="50dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loader"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
